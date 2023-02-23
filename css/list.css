@@ -1,0 +1,197 @@
+/* 列表页专有的css */
+/* 秒杀模块 */
+.header .oneshot {
+    position: absolute;
+    left: 185px;
+    top: 40px;
+    width: 71px;
+    height: 32px;
+    padding: 3px 0 3px 14px;
+    border-left: 1px solid #b1191a;
+}
+
+.nav .sk_list {
+    float: left;
+    width: 360px;
+    height: 44px;
+}
+.nav .sk_list ul li {
+    float: left;
+    height: 44px;
+    margin: 0 28px;
+    text-align: center;
+    line-height: 44px;
+}
+
+.nav .sk_list ul li a {
+    font-size: 16px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.nav .sk_con {
+    float: left;
+    width: 791px;
+    height: 42px;
+    margin-left: 7px;
+}
+
+.nav .sk_contents ul li {
+    float: left;
+    height: 42px;
+    margin: 0 23px;
+    text-align: center;
+    line-height: 42px;
+}
+
+.nav .sk_contents ul li a {
+    font-size: 14px;
+}
+
+.nav .sk_contents ul li a i {
+    font-family: "icomoon";
+}
+/* 秒杀模块 end */
+
+/* sk_container模块 start */
+.sk_hd {
+    position: relative;
+    height: 120px;
+    background: url(../images/sk_hd.png) no-repeat;
+}
+
+.sk_hd h3 {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    margin-left: -70px;
+    font-size: 24px;
+    color: #c81523;
+}
+.sk_hd h3 i {
+    font-family: "icomoon";
+}
+
+.sk_bd {
+    overflow: hidden;
+}
+
+.sk_bd ul {
+    width: 1216px;
+}
+.sk_bd ul li {
+    float: left;
+    width: 290px;
+    height: 460px;
+    margin-right: 13px;
+    border: 1px solid #ffffff;
+}
+.sk_bd ul li:hover {
+    border: 1px solid #e12228;
+}
+
+.sk_bd ul li .product_pic {
+    height: 294px;
+    width: 288px;
+}
+
+.sk_bd ul li .product_pic img {
+    margin: auto auto;
+}
+.sk_bd ul li .product_info {
+    width: 288px;
+    height: 164px;
+}
+.sk_bd ul li .product_info h5 {
+    width: 266px;
+    height: 45px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22.5px;
+    margin: 0 11px;
+}
+.sk_bd ul li .product_info p {
+    width: 266px;
+    height: 40px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #e60012;
+    line-height: 40px;
+    margin: 0 11px;
+}
+.sk_bd ul li .product_info p i {
+    font-size: 14px;
+    color: #b7b7b7;
+    text-decoration: line-through;
+}
+
+.sk_bd ul li .product_info .inventory {
+    height: 18px;
+    width: 266px;
+    margin: 0 11px;
+    font-size: 14px;
+    line-height: 18px;
+}
+.sk_bd ul li .product_info .inventory i {
+    color: #e12228;
+}
+.sk_bd ul li .product_info .inventory span {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 133px;
+    height: 12px;
+    border: 1px solid #ed282e;
+    border-radius: 5px;
+}
+.sk_bd ul li .product_info .inventory span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85%;
+    height: 100%;
+    background-color: #ed282e;
+}
+
+.sk_bd ul li .product_info .buy {
+    display: block;
+    height: 49px;
+    width: 288px;
+    margin-top: 12px;
+    background-color: #b1191a;
+    font-size: 20px;
+    text-align: center;
+    line-height: 49px;
+    color: #ffffff;
+}
+/* sk_container模块 end */
+
+/* 底部空白模块 */
+.blank {
+    height: 200px;
+}
+
+/* 侧边返回顶部模块 */
+.to_top {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    top: 310px;
+    left: 50%;
+    background-color: #b1191a;
+    margin-left: 620px;
+}
+
+.to_top a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 5px 10px;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+}
+.to_top i {
+    font-family: "icomoon";
+}

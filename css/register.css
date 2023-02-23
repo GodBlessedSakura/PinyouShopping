@@ -1,0 +1,173 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+header {
+    height: 84px;
+    border-bottom: 2px solid #b1191a;
+}
+
+header a img {
+    width: 172px;
+    height: 61px;
+    margin: 12px 0 9px 4px;
+}
+
+.registerarea {
+    height: 522px;
+    border: 1px solid #dfdfdf;
+    margin-top: 20px;
+}
+
+.registerarea h3 {
+    width: 1198px;
+    height: 41px;
+    border-bottom: 1px solid #dfdfdf;
+    line-height: 40px;
+}
+
+.registerarea h3 p:nth-child(1) {
+    float: left;
+    margin-left: 10px;
+    font-style: 18px;
+    color: #333333;
+}
+.registerarea h3 p:nth-child(2) {
+    float: right;
+    margin-right: 10px;
+    font-style: 14px;
+    color: #333333;
+}
+.registerarea h3 p:nth-child(2) i a {
+    color: #c81623;
+}
+
+.registerarea .reg_form {
+    height: 372px;
+    width: 600px;
+    margin: 50px auto 57px auto;
+}
+.registerarea .reg_form li {
+    margin-bottom: 20px;
+}
+
+/* 小眼睛图标样式 start */
+.registerarea li:nth-child(3) {
+    position: relative;
+}
+.registerarea li:nth-child(3) .eye {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 280px;
+    top: 6px;
+}
+.registerarea li:nth-child(3) .eye:hover {
+    cursor: pointer;
+}
+/* 小眼睛图标样式 end */
+
+.registerarea .reg_form label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+.registerarea .reg_form input {
+    width: 241px;
+    height: 36px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+}
+.registerarea .reg_form li input {
+    color: #666666;
+}
+
+.registerarea .reg_form .message {
+
+    color: #666666;
+    margin-left: 10px;
+
+
+}
+.registerarea .reg_form .error {
+    color: #c81623;
+    margin-left: 10px;
+}
+.registerarea .reg_form .success {
+    color: green;
+    margin-left: 10px;
+}
+.registerarea .reg_form .safe i {
+    padding: 0 11px;
+    color: #ffffff;
+    margin-left: 1px;
+}
+.registerarea .reg_form .safe {
+    margin-left: 173px;
+    color: #666666;
+}
+.registerarea .reg_form .safe i:nth-child(1) {
+    background-color: #de1111;
+    margin-left: 6px;
+}
+.registerarea .reg_form .safe i:nth-child(2) {
+    background-color: #f79100;
+}
+.registerarea .reg_form .safe i:nth-child(3) {
+    background-color: #40b83f;
+}
+
+.registerarea .reg_form .agreement {
+    height: 15px;
+    line-height: 15px;
+
+}
+.registerarea .reg_form .agreement input {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    margin: -3px 12px 0 90px;
+}
+.registerarea .reg_form .agreement a {
+    color: #1ba1e6;
+}
+
+.registerarea .submit {
+    width: 200px;
+    height: 34px;
+    margin-top: 30px;
+}
+
+.registerarea .submit a {
+    display: block;
+    width: 200px;
+    height: 34px;
+    margin-left: 101px;
+    background-color: #c81623;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 34px;
+    text-align: center;
+}
+
+/* footer start */
+footer .mod_copyright .copyright_links {
+    width: 1000px;
+    height: 12px;
+    margin: 20px auto 15px auto;
+}
+footer .mod_copyright .copyright_links ul li {
+    float: left;
+    height: 12px;
+    padding: 0 14px;
+    line-height: 12px;
+}
+footer .mod_copyright .copyright_links ul li:nth-child(2n) {
+    width: 1px;
+    padding: 0;
+    background-color: #666666;
+}
+footer .mod_copyright .copyright_info {
+    text-align: center;
+}

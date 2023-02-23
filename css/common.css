@@ -1,0 +1,517 @@
+/* 声明字体图标，这里一定要注意路径的变化 */
+@font-face {
+    font-family: "icomoon";
+    src: url("../fonts/icomoon.eot?tomleg");
+    src: url("../fonts/icomoon.eot?tomleg#iefix") format("embedded-opentype"),
+        url("../fonts/icomoon.ttf?tomleg") format("truetype"),
+        url("../fonts/icomoon.woff?tomleg") format("woff"),
+        url("../fonts/icomoon.svg?tomleg#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+/* 版心 */
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.style_red {
+    color: #c81623;
+}
+
+/* 登录模块 start */
+.login {
+    display: none;
+    width: 512px;
+    height: 280px;
+    position: fixed;
+    border: #ebebeb solid 1px;
+    left: 50%;
+    top: 50%;
+    background: #ffffff;
+    box-shadow: 0px 0px 20px #ddd;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+.login-title {
+    width: 100%;
+    margin: 10px 0px 0px 0px;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    font-size: 18px;
+    position: relative;
+    cursor: move;
+}
+
+.login-input-content {
+    margin-top: 20px;
+}
+
+.login-button {
+    width: 50%;
+    margin: 30px auto 0px auto;
+    line-height: 40px;
+    font-size: 14px;
+    border: #ebebeb 1px solid;
+    text-align: center;
+}
+
+.login-bg {
+    display: none;
+    width: 100%;
+    height: 100%;
+    /* 这个绝对定位使得背景元素不可点击 */
+    position: fixed;
+    z-index: 999;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, .3);
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.login-button a {
+    display: block;
+}
+
+.login-input input.list-input {
+    float: left;
+    line-height: 35px;
+    height: 35px;
+    width: 350px;
+    border: #ebebeb 1px solid;
+    text-indent: 5px;
+}
+
+.login-input {
+    overflow: hidden;
+    margin: 0px 0px 20px 0px;
+}
+
+.login-input label {
+    float: left;
+    width: 90px;
+    padding-right: 10px;
+    text-align: right;
+    line-height: 35px;
+    height: 35px;
+    font-size: 14px;
+}
+
+.login-title span {
+    position: absolute;
+    font-size: 12px;
+    right: -20px;
+    top: -30px;
+    background: #ffffff;
+    border: #ebebeb solid 1px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+/* 登录模块 end */
+
+
+
+/* 快捷导航模块 */
+.shortcut {
+    height: 31px;
+    background-color: #f1f1f1;
+    line-height: 31px;
+}
+
+.shortcut ul li {
+    float: left;
+}
+
+.shortcut .fr ul li:nth-child(2n) {
+    width: 1px;
+    height: 12px;
+    background-color: #666666;
+    margin: 9px 14px 0 16px;
+}
+.arrow-icon::after {
+    /* 下拉三角 */
+    content: "\e91e";
+    font-family: "icomoon";
+
+    margin-left: 10px;
+}
+
+/* Header头部制作 */
+.header {
+    position: relative;
+    height: 105px;
+}
+
+.header .logo {
+    position: absolute;
+    top: 26px;
+    left: 3px;
+    width: 171px;
+    height: 61px;
+}
+
+.header .logo a {
+    display: block;
+    width: 171px;
+    height: 61px;
+    font-size: 0;
+    background: url(../images/logo.png) no-repeat;
+}
+
+.header .search {
+    position: absolute;
+    top: 25px;
+    left: 347px;
+    width: 538px;
+    height: 36px;
+    border: 2px solid #b1191a;
+}
+
+.header .search input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 454px;
+    height: 32px;
+    padding-left: 10px;
+}
+
+.header .search input::placeholder {
+    font-size: 14px;
+    color: #666666;
+}
+.header .search button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 32px;
+    color: #ffffff;
+    background-color: #b1191a;
+}
+
+.header .hotwords {
+    position: absolute;
+    top: 69px;
+    left: 348px;
+    height: 12px;
+}
+
+.header .hotwords li {
+    float: left;
+    padding: 0 12.5px;
+}
+.header .shopcart {
+    position: absolute;
+    width: 140px;
+    height: 36px;
+    top: 25px;
+    right: 64px;
+    border: 1px solid #dfdfdf;
+    background: #f7f7f7 url(../images/shopcart.png) no-repeat 18px 11px;
+    line-height: 36px;
+}
+
+.header .shopcart a {
+    display: block;
+    width: 140px;
+    height: 36px;
+    font-size: 12px;
+    padding-left: 43px;
+}
+.header .shopcart a::after {
+    content: "\e920";
+    font-family: "icomoon";
+    font-size: 18px;
+    /* vertical-align: middle 可以让字体图标和文字对齐 */
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.header .shopcart .count {
+    position: absolute;
+    top: -4px;
+    left: 105px;
+    z-index: 1;
+    height: 16px;
+    padding: 0 5px;
+    border-radius: 8px 8px 8px 0;
+    background-color: #e60012;
+    font-style: 12px;
+    color: #fefefe;
+    text-align: center;
+    line-height: 16px;
+}
+/* nav导航栏制作 */
+.nav {
+    height: 47px;
+    border-bottom: 2px solid #b1191a;
+}
+.nav .dropdown {
+    float: left;
+    width: 209px;
+    height: 47px;
+    margin-right: 10px;
+    background-color: #b1191a;
+}
+.nav .dropdown .dt {
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 45px;
+    text-align: center;
+}
+.nav .dropdown .dd {
+    display: none;
+    width: 100%;
+    height: 465px;
+    background-color: #c81623;
+}
+.nav .dropdown:hover .dd {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 209px;
+}
+.nav .dropdown .dd li {
+    position: relative;
+    height: 31px;
+    line-height: 31px;
+    margin-left: 2px;
+    /* 这里我们设置只有点文字才能跳转链接，把padding加到li里 */
+    padding-left: 10px;
+    color: #ffffff;
+}
+
+.nav .dropdown .dd li:hover {
+    background-color: #ffffff;
+}
+
+.nav .dropdown .dd li:hover a,
+.nav .dropdown .dd li:hover::after {
+    color: #c81623;
+}
+
+.nav .dropdown .dd li a {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* 插入字体图标，这里字体图标点击不会跳转链接，之前的链接也是一段文字对应一个链接 */
+.nav .dropdown .dd li::after {
+    position: absolute;
+    content: "\e920";
+    top: 1px;
+    /* 调整字体图标与文字对齐 */
+    right: 10px;
+    font-family: "icomoon";
+}
+
+.nav .navitems {
+    float: left;
+}
+.nav .navitems ul li {
+    float: left;
+}
+.nav .navitems ul li a {
+    position: relative;
+    display: block;
+    height: 45px;
+    /* 给a加padding，只要点盒子就可以点链接*/
+    padding: 0 25px;
+    font-size: 16px;
+    color: #333333;
+    font-size: 16px;
+    line-height: 45px;
+    transition: all 0.4s;
+    transform-style: preserve-3d;
+}
+.nav .navitems ul li a:hover {
+    transform: rotateX(90deg);
+}
+.nav .navitems ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #f1f1f1;
+    transform: translateZ(22.5px);
+    text-align: center;
+    line-height: 45px;
+    perspective: 600px;
+}
+.nav .navitems ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #c81623;
+    color: #ffffff;
+    transform: translateY(22.5px) rotateX(-90deg);
+    text-align: center;
+    line-height: 45px;
+}
+.nav .navitems ul li:nth-child(1) a::after,
+.nav .navitems ul li:nth-child(1) a::before {
+    content: "服装城";
+}
+.nav .navitems ul li:nth-child(2) a::after,
+.nav .navitems ul li:nth-child(2) a::before {
+    content: "美妆馆";
+}
+.nav .navitems ul li:nth-child(3) a::after,
+.nav .navitems ul li:nth-child(3) a::before {
+    content: "传智超市";
+}
+.nav .navitems ul li:nth-child(4) a::after,
+.nav .navitems ul li:nth-child(4) a::before {
+    content: "全球购";
+}
+.nav .navitems ul li:nth-child(5) a::after,
+.nav .navitems ul li:nth-child(5) a::before {
+    content: "闪购";
+}
+.nav .navitems ul li:nth-child(6) a::after,
+.nav .navitems ul li:nth-child(6) a::before {
+    content: "团购";
+}
+.nav .navitems ul li:nth-child(7) a::after,
+.nav .navitems ul li:nth-child(7) a::before {
+    content: "拍卖";
+}
+.nav .navitems ul li:nth-child(8) a::after,
+.nav .navitems ul li:nth-child(8) a::before {
+    content: "有趣";
+}
+
+/* 底部模块制作 footer */
+.footer {
+    height: 417px;
+    background-color: #f5f5f5;
+}
+
+.footer .mod_service {
+    height: 110px;
+    padding: 30px 0px;
+    border-bottom: 1px solid #ededed;
+}
+
+.footer .mod_service ul li {
+    float: left;
+    width: 240px;
+    height: 50px;
+    /* 整体往右移一点，但宽高未变 */
+    padding-left: 35px;
+}
+
+.footer .mod_service ul li h5 {
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+.footer .mod_service ul li .service_text {
+    float: left;
+    margin-left: 6px;
+}
+
+.footer .mod_service ul li .service_text h4 {
+    padding: 5px 0;
+    margin-top: 3px;
+    font-size: 14px;
+    color: #333333;
+    line-height: 14px;
+}
+.footer .mod_service ul li .service_text p {
+    padding: 5px 0;
+    line-height: 12px;
+}
+
+.footer .mod_service ul li .service1 {
+    background: url(../images/icons1.png) no-repeat 0 0;
+}
+
+.footer .mod_service ul li .service2 {
+    background: url(../images/icons1.png) no-repeat -240px 0;
+}
+.footer .mod_service ul li .service3 {
+    background: url(../images/icons1.png) no-repeat -489px 0;
+}
+.footer .mod_service ul li .service4 {
+    background: url(../images/icons1.png) no-repeat -724px 0;
+}
+.footer .mod_service ul li .service5 {
+    background: url(../images/icons1.png) no-repeat -978px 0;
+}
+
+.footer .mod_help {
+    height: 185px;
+    border-bottom: 1px solid #ededed;
+    padding-top: 10px;
+}
+.footer .mod_help div {
+    float: left;
+    width: 200px;
+    height: 185px;
+    padding-left: 45px;
+}
+.footer .mod_help div dl dt {
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    color: #333333;
+}
+.footer .mod_help div dl dd {
+    height: 20px;
+    line-height: 20px;
+}
+.footer .mod_help .qr_code {
+    position: relative;
+    background: url(../images/qr_code.png) no-repeat 32px 45px;
+}
+.footer .mod_help .qr_code::after {
+    content: "品优购客户端";
+    position: absolute;
+    bottom: 20px;
+    right: 87px;
+    color: #333333;
+}
+.footer .mod_copyright .copyright_links {
+    width: 1000px;
+    height: 12px;
+    margin: 20px auto 15px auto;
+}
+.footer .mod_copyright .copyright_links ul li {
+    float: left;
+    height: 12px;
+    padding: 0 14px;
+    line-height: 12px;
+}
+.footer .mod_copyright .copyright_links ul li:nth-child(2n) {
+    width: 1px;
+    padding: 0;
+    background-color: #666666;
+}
+.footer .mod_copyright .copyright_info {
+    text-align: center;
+}

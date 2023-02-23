@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>个人注册</title>
+        <!-- 引入网站图标 -->
+        <link rel="shortcut icon" href="favicon.ico" />
+        <!-- 引入初始化样式文件 -->
+        <link rel="stylesheet" href="css/base.css" />
+        <!-- 引入初始化样式文件 -->
+        <link rel="stylesheet" href="css/register.css" />
+    </head>
+    <body>
+        <div class="w">
+            <header><a href="index.html"><img src="images/logo_register.png" alt=""></a> </header>
+            <div class="registerarea">
+                <h3><p>注册新用户</p><p>我有账号，去<i><a href="#">登录</a></i></p></h3>
+                <div class="reg_form">
+                    <ul>
+                        <li><label for="tel">手机号：</label><input type="tel" name="tel" id="tel"><span class="message"><i class="message_icon"><img src="images/message_icon.png" alt=""></i> 请输入11位手机号码</span></li>
+
+                        <li><label for="OTP">短信验证码：</label><input type="text" name="OTP" id="TOP"><span class="message"><i class="message_icon"><img src="images/message_icon.png" alt=""></i> 请输入6位验证码</span></li>
+
+                        <li><label for="password">登陆密码：</label><input type="password" name="password" id="password" ><span class="message"><i class="message_icon"><img src="images/message_icon.png" alt=""></i> 请输入6~14位密码</span><img src="images/close.png" alt="" class="eye"> </li>
+
+                        <li class="safe">安全程度：<i>弱</i><i>中</i><i>强</i></li>
+
+                        <li><label for="check_pwd">确认密码：</label><input type="password" name="check_pwd" id="check_pwd"><span class="message"><i class="message_icon"><img src="images/message_icon.png" alt=""></i> 请再次输入您的密码</span></li>
+                        <li class="agreement"><input type="checkbox">同意协议并注册&nbsp;&nbsp;<a href="#">《品优购用户协议》</a></li>
+                        <li class="submit"><a href="#">完成注册</a></li>
+                    </ul>
+                </div>
+            </div>
+            <footer>
+                <div class="mod_copyright w">
+                    <div class="copyright_links">
+                        <ul>
+                            <li><a href="#">关于我们</a></li>
+                            <li></li>
+                            <li><a href="#">联系我们</a></li>
+                            <li></li>
+                            <li><a href="#">联系客服</a></li>
+                            <li></li>
+                            <li><a href="#">商家入驻</a></li>
+                            <li></li>
+                            <li><a href="#">营销中心</a></li>
+                            <li></li>
+                            <li><a href="#">手机品优购</a></li>
+                            <li></li>
+                            <li><a href="#">友情链接</a></li>
+                            <li></li>
+                            <li><a href="#">销售联盟</a></li>
+                            <li></li>
+                            <li><a href="#">品优购社区</a></li>
+                            <li></li>
+                            <li><a href="#">品优购公益</a></li>
+                            <li></a></li>
+                            <li><a href="#">English Site</a></li>
+                            <li></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                        
+                    </div>
+                    <div class="copyright_info"><p class="copyright_info">地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cn <br>京ICP备08001421号京公网安备110108007702</p></div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Java Script 部分 -->
+        <script>
+            // 验证手机号
+            var tel = document.querySelector('.registerarea .reg_form li:nth-child(1) input')
+            var text1 = document.querySelector('.registerarea .reg_form li:nth-child(1) .message')
+            tel.onblur =function() {
+                if (tel.value.length !== 11 && tel.value.length !== 0) {
+                    text1.className = 'message error'
+                    text1.innerHTML = '<i class="message_icon"><img src="images/error_icon.png" alt=""></i> 您输入的手机号码格式不正确'
+                } else if (tel.value.length === 11){
+                    text1.className = 'message success'
+                    text1.innerHTML = '<i class="message_icon"><img src="images/success_icon.png" alt=""></i> 手机号码格式正确'
+                } else {
+                    text1.className = 'message'
+                    text1.innerHTML = '<i class="message_icon"><img src="images/message_icon.png" alt=""></i> 请输入11位手机号码'
+                }
+
+            }
+            //验证验证码
+            var OTP = document.querySelector('.registerarea .reg_form li:nth-child(2) input')
+            var text2 = document.querySelector('.registerarea .reg_form li:nth-child(2) .message')
+            OTP.onblur =function() {
+                if (OTP.value.length !== 6 && OTP.value.length !== 0) {
+                    text2.className = 'message error'
+                    text2.innerHTML = '<i class="message_icon"><img src="images/error_icon.png" alt=""></i> 验证码格式不正确'
+                } else if (OTP.value.length === 6){
+                    text2.className = 'message success'
+                    text2.innerHTML = '<i class="message_icon"><img src="images/success_icon.png" alt=""></i> 验证码格式正确'
+                } else {
+                    text2.className = 'message'
+                    text2.innerHTML = '<i class="message_icon"><img src="images/message_icon.png" alt=""></i> 请输入6位验证码'
+                }
+
+            }
+            //验证密码
+            var pwd = document.querySelector('.registerarea .reg_form li:nth-child(3) input')
+            var text3 = document.querySelector('.registerarea .reg_form li:nth-child(3) .message')
+            pwd.onkeyup = pwd_ck1
+            
+            function pwd_ck1() {
+                if (pwd.value.length < 6  && pwd.value.length !== 0 || pwd.value.length > 14) {
+                    text3.className = 'message error'
+                    text3.innerHTML = '<i class="message_icon"><img src="images/error_icon.png" alt=""></i> 密码格式不正确'
+                } else if (pwd.value.length>=6 && pwd.value.length<=14){
+                    text3.className = 'message success'
+                    text3.innerHTML = '<i class="message_icon"><img src="images/success_icon.png" alt=""></i> 密码格式正确'
+                } else {
+                    text3.className = 'message'
+                    text3.innerHTML = '<i class="message_icon"><img src="images/message_icon.png" alt=""></i> 请输入6~14位密码'
+                }
+                pwd_ck2()
+
+            }
+            //小眼睛图标图标
+            var eye = document.querySelector('.registerarea li .eye') 
+            eye.addEventListener('click',click_on_eye)
+            function click_on_eye() {
+                if (pwd.type === 'password') {
+                    eye.src = "images/open.png"
+                    pwd.type = 'text'
+                } else if(pwd.type === 'text') {
+                    eye.src = "images/close.png"
+                    pwd.type = 'password'
+                }
+            }
+            //验证两次密码输入是否一致
+            var pwd2 = document.querySelector('.registerarea .reg_form li:nth-child(5) input')
+            var text4 = document.querySelector('.registerarea .reg_form li:nth-child(5) .message')
+            pwd2.onkeyup =pwd_ck2
+            
+            function pwd_ck2() {
+                if (pwd.value !== pwd2.value && pwd2.value.length !==0 && text3.className !== 'message error') {
+                    text4.className = 'message error'
+                    text4.innerHTML = '<i class="message_icon"><img src="images/error_icon.png" alt=""></i> 两次输入的密码不一致'
+                } else if (pwd.value !== pwd2.value && pwd2.value.length !==0 && text3.className === 'message error') {
+                    text4.className = 'message error'
+                    text4.innerHTML = '<i class="message_icon"><img src="images/error_icon.png" alt=""></i> 密码格式不正确'
+
+                } else if (pwd.value === pwd2.value && pwd2.value.length !==0 && text3.className === 'message error') {
+                    text4.className = 'message error'
+                    text4.innerHTML = '<i class="message_icon"><img src="images/error_icon.png" alt=""></i> 密码格式不正确'
+                } else if (pwd.value === pwd2.value && pwd2.value.length !==0 && text3.className == 'message success'){
+                    text4.className = 'message success'
+                    text4.innerHTML = '<i class="message_icon"><img src="images/success_icon.png" alt=""></i> 密码验证成功'
+                } else {
+                    text4.className = 'message'
+                    text4.innerHTML = '<i class="message_icon"><img src="images/message_icon.png" alt=""></i> 请再次输入您的密码'
+                }
+
+
+            }
+        </script>
+        
+        
+    </body>
+</html>

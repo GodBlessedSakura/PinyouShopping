@@ -1,2 +1,3 @@
 # PinyouShopping
-A static e-commerce webpage
+
+**品优购电商是一个仿京东商城的电商页面，使用原生 HTML + CSS + JS 构建前端页面，是早期自学前端不错的项目，之前做完以后做了基于样式和动画的优化，一直保存在本地，今天忽然想起来，传到 github 上然后部署到线上**
